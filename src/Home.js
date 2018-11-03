@@ -24,13 +24,13 @@ class Home extends React.Component {
 				<div className="list-books-content">
 					<div>
 						{/* Currently Reading Shelf */}
-						<Shelf title="Currently Reading" books={this.props.currentlyReading}/>
+						<Shelf title="Currently Reading" books={this.props.currentlyReading} moveBook={this.props.moveBook}/>
 
 						{/* Want to Read Shelf*/}
-						<Shelf title="Want to Read" books={this.props.wantToRead}/>
+						<Shelf title="Want to Read" books={this.props.wantToRead} moveBook={this.props.moveBook}/>
 
 						{/* Read Shelf */}
-						<Shelf title="Read" books={this.props.read}/>
+						<Shelf title="Read" books={this.props.read} moveBook={this.props.moveBook}/>
 					</div>
 
 					{/* Open Search Button*/}
