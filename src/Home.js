@@ -7,10 +7,14 @@ import OpenSearch from './OpenSearch'
 
 class Home extends React.Component {
 	componentDidMount() {
-		BooksAPI.getAll().then((books) => {
-			const BOOKS = getAll();
-			console.log(BOOKS);
-		}).catch(error =>	console.log(error));
+		BooksAPI.getAll().then(
+			(books) => {
+				const BOOKS = getAll();
+				this.setState({ books });
+				console.log(BOOKS);
+		}).catch(
+			error => {console.log(error)}
+		);
 	}
   render() {
     return (
@@ -21,7 +25,9 @@ class Home extends React.Component {
 				<div className="list-books-content">
 					<div>
 						{/* Currently Reading Shelf */}
-						<Shelf title="Currently Reading"/>
+						<Shelf
+							title="Currently Reading"
+							/>
 
 						{/* Want to Read Shelf*/}
 						<Shelf title="Want to Read"/>
