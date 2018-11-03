@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+import { getAll } from './BooksAPI'
+import * as BooksAPI from './BooksAPI'
+
 import Shelf from './Shelf'
 import OpenSearch from './OpenSearch'
 
 class Home extends React.Component {
+	componentDidMount() {
+		BooksAPI.getAll().then((books) => {
+			const BOOKS = getAll();
+			console.log(BOOKS);
+		}).catch(error =>	console.log(error));
+	}
   render() {
     return (
 			<div className="list-books">
