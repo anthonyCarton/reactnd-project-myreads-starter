@@ -5,16 +5,15 @@ import * as BooksAPI from './BooksAPI'
 import Shelf from './Shelf'
 import OpenSearch from './OpenSearch'
 
+
 class Home extends React.Component {
-	componentDidMount() {
-		BooksAPI.getAll().then(
-			(books) => {
-				const BOOKS = getAll()
-				this.setState({ books })
-				console.log(BOOKS)
-		}).catch(
-			error => {console.log(error)}
-		);
+	async componentDidMount() {
+		try {
+			const books = await getAll();
+			this.props.addBooks(books);
+		} catch (error) {
+			console.log(error);
+		}
 	}
   render() {
     return (
@@ -25,15 +24,13 @@ class Home extends React.Component {
 				<div className="list-books-content">
 					<div>
 						{/* Currently Reading Shelf */}
-						<Shelf
-							title="Currently Reading"
-							/>
+						<Shelf title="Currently Reading" books={this.props.currentlyReading}/>
 
 						{/* Want to Read Shelf*/}
-						<Shelf title="Want to Read"/>
+						<Shelf title="Want to Read" books={this.props.wantToRead}/>
 
 						{/* Read Shelf */}
-						<Shelf title="Read"/>
+						<Shelf title="Read" books={this.props.read}/>
 					</div>
 
 					{/* Open Search Button*/}
