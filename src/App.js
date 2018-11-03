@@ -57,6 +57,8 @@ class BooksApp extends React.Component {
 								<Shelf />
               </div>
             </div>
+
+						{/* Open Search Button*/}
 						<OpenSearch />
           </div>
         )}
