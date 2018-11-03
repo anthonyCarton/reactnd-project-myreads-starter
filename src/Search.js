@@ -80,6 +80,7 @@ class Search extends React.Component {
 									/>
 								);
 							})}
+							{this.state.books.length === 0 && <p>No results found</p>}
 					</ol>
 				</div>
 			</div>

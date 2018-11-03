@@ -3,6 +3,7 @@ import { update } from './BooksAPI'
 
 class Book extends React.Component {
 	handleChange = async element => {
+		element.persist();
 		try {
 			const shelf = element.target.value;
 			const book = this.props;
