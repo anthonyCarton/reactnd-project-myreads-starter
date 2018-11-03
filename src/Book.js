@@ -21,7 +21,7 @@ class Book extends React.Component {
 						<div className="book-cover" style={{
 							width: 128,
 							height: 193,
-							backgroundImage: `url(${this.props.imageLinks.thumbnail})`
+							backgroundImage: `url(${this.props.imageLinks ? this.props.imageLinks.thumbnail : ''})`
 						}}></div>
 						<div className="book-shelf-changer">
 							<select onChange={this.handleChange} value={this.props.shelf}>
@@ -34,7 +34,7 @@ class Book extends React.Component {
 						</div>
 					</div>
 					<div className="book-title">{this.props.title}</div>
-					<div className="book-authors">{this.props.authors[0]}</div>
+					<div className="book-authors">{this.props.authors ? this.props.authors[0] : 'Anonymous'}</div>
 				</div>
 			</li>
 		);
