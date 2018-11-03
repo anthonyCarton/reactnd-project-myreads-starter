@@ -9,9 +9,9 @@ class Home extends React.Component {
 	componentDidMount() {
 		BooksAPI.getAll().then(
 			(books) => {
-				const BOOKS = getAll();
-				this.setState({ books });
-				console.log(BOOKS);
+				const BOOKS = getAll()
+				this.setState({ books })
+				console.log(BOOKS)
 		}).catch(
 			error => {console.log(error)}
 		);
