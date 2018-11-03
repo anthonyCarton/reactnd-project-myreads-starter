@@ -14,6 +14,7 @@ class Search extends React.Component {
 			books: []
 		}
 	}
+	// Future TODO: use .then.catch instead of async
 	async componentDidMount() {
 		try {
 			const books = await getAll();

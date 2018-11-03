@@ -33,7 +33,7 @@ class Home extends React.Component {
 						<Shelf title="Read" books={this.props.read} moveBook={this.props.moveBook}/>
 					</div>
 
-					{/* Open Search Button*/}
+					{/* Go To Search Button*/}
 					<OpenSearch />
 				</div>
 			</div>

@@ -11,22 +11,24 @@ class BooksApp extends React.Component {
     return (
 			<div className="app">
 				<Provider>
-		        <Route
-							exact
-							path='/'
-							render={() => (
-								<AppContext.Consumer>
-									{context => <Home {...context} />}
-								</AppContext.Consumer>
-		        )} />
-		        <Route
-							exact
-							path='/search'
-							render={() => (
-								<AppContext.Consumer>
-									{context => <Search {...context} />}
-								</AppContext.Consumer>
-		        )}/>
+					{/* Display Home Page */}
+	        <Route
+						exact
+						path='/'
+						render={() => (
+							<AppContext.Consumer>
+								{context => <Home {...context} />}
+							</AppContext.Consumer>
+	        )} />
+					{/* Display Search Page */}
+	        <Route
+						exact
+						path='/search'
+						render={() => (
+							<AppContext.Consumer>
+								{context => <Search {...context} />}
+							</AppContext.Consumer>
+	        )}/>
 				</Provider>
 			</div>
     )

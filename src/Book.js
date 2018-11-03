@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { update } from './BooksAPI'
 
 class Book extends React.Component {
+	// Future TODO: use .then.catch instead of async
 	handleChange = async element => {
 		element.persist();
 		try {
