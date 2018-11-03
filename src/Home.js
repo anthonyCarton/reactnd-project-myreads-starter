@@ -23,8 +23,8 @@ class Home extends React.Component {
 
 					{/* Open Search Button*/}
 					<OpenSearch />
-
 				</div>
+			</div>
 		)
 	}
 }
