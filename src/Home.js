@@ -12,13 +12,13 @@ class Home extends React.Component {
 				<div className="list-books-content">
 					<div>
 						{/* Currently Reading Shelf */}
-						<Shelf />
+						<Shelf title="Currently Reading"/>
 
 						{/* Want to Read Shelf*/}
-						<Shelf />
+						<Shelf title="Want to Read"/>
 
 						{/* Read Shelf */}
-						<Shelf />
+						<Shelf title="Read"/>
 					</div>
 
 					{/* Open Search Button*/}
